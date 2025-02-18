@@ -15,3 +15,47 @@
 .text-center-tick {
   text-align: -webkit-center !important;
 }
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  backdrop-filter: blur(100px) !important;
+  mix-blend-mode: color-burn;
+}
+
+.marquee .images {
+  display: flex;
+  animation: marquee 30s linear infinite;
+  position: relative;
+  mix-blend-mode: color-burn;
+}
+
+.marquee .images img {
+  margin-right: 20px;
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  mix-blend-mode: color-burn !important;
+  position: relative;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (min-width: 0) and (max-width: 500px) {
+  .marquee .images {
+    display: flex;
+    animation: marquee 10s linear infinite;
+  }
+  .marquee .images img {
+    height: 50px;
+    width: 50px;
+  }
+}

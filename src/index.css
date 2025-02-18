@@ -22,4 +22,7 @@
   font-weight: normal;
   font-style: normal;
 }
+.filter-white img {
+  filter: invert(100%) brightness(200%);
+}
 
