@@ -3,19 +3,19 @@ import { Phone, Mail } from 'lucide-react'
 import ContactSection from './ContactSection'
 const context = [
   {
-    heading: 'Visionary Partner',
-    text: 'Premium branding and exposure across all event platforms.'
+    heading: 'Trailblazer Sponsorship',
+    text: `<p className="text-white/80">A cost-effective way to align your brand <br>with innovation.</p>`
   },
   {
-    heading: 'Innovation Partner',
-    text: 'Highlighted presence in key event areas and marketing materials.'
+    heading: 'Innovator Sponsorship',
+    text: `<p className="text-white/80">Highlighted presence in key event areas<br> and marketing materials.</p>`
   },
   {
-    heading: 'Empowerment Partner',
-    text: 'A cost-effective way to align your brand with innovation.'
+    heading: 'Visionary Sponsorship',
+    text: `<p className="text-white/80">Premium branding and exposure<br> across all event platforms.</p>`
   }
 ]
-const PartnerPage = () => {
+const PartnerPage = ({ scrollToSection }) => {
   return (
     <>
       <div className='bg-black-to-green-gradient p-8 text-white' id='partner'>
@@ -50,11 +50,14 @@ const PartnerPage = () => {
                       transform: 'translate(-50%,-20%)'
                     }}
                   >
-                    <h3 className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gotham italic  font-bold'>
+                    <h3 className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold'>
                       {para.heading}
                     </h3>
                   </div>
-                  <p className='text-white/80'>{para.text}</p>
+                  <div
+                    className='text-white/80'
+                    dangerouslySetInnerHTML={{ __html: para.text }}
+                  />
                 </div>
               </div>
             ))}
@@ -64,18 +67,13 @@ const PartnerPage = () => {
             src='images/Rectangle.png'
           />
 
-<div className='marquee'>
+          <div className='marquee'>
             <div className='images text-white'>
-              {/* <img src='images/logo-01.png' alt='logo' /> */}
               <img src='images/logo-02.png' alt='logo' />
               <img src='images/logo-03.png' alt='logo' />
               <img src='images/logo-04.png' alt='logo' />
               <img src='images/logo-05.png' alt='logo' />
               <img src='images/logo-06.png' alt='logo' />
-              {/* <img src='images/logo-07.png' alt='logo' /> */}
-              {/* <img src='images/logo-08.png' alt='logo' /> */}
-              {/* <img src='images/logo-09.png' alt='logo' /> */}
-              {/* <img src='images/iwan_ventures_logo.png.png' alt='logo' /> */}
               <img src='images/logo-10.png' alt='logo' />
               <img src='images/011.png' alt='011' />
               <img src='images/logo-11.png' alt='logo' />
@@ -85,12 +83,6 @@ const PartnerPage = () => {
               <img src='images/logo-15.png' alt='logo' />
               <img src='images/logo-16.jpg' alt='logo' />
               <img src='images/logo-17.jpg' alt='logo' />
-              <img src='images/logo-18.png' alt='logo' />
-              <img src='images/logo-19.png' alt='logo' />
-
-             
-
-
             </div>
           </div>
           <div
@@ -99,47 +91,50 @@ const PartnerPage = () => {
               boxShadow: '7px 7px 10px 0px #FFFFFF80'
             }}
           >
-
-            
             <div className='flex justify-between items-center  flex-wrap gap-4'>
-              <p className='text-yellow-400 text-[16px] md:text-[22px] z-10  lg:text-[25px] 2xl:text-[30px]  font-gotham italic font-bold'>
+              <p className='text-yellow-400 text-[16px] md:text-[22px] z-10  lg:text-[25px] 2xl:text-[30px]  font-gothamBook italic font-bold'>
                 For partnership inquiries, contact us at
               </p>
               <div className='space-y-2'>
                 <div className='flex items-center gap-3'>
-                  <div className='rounded-full bg-cyan-300/20 gradient-border p-2'>
-                    <Phone className='text-cyan-300' size={20} />
-                  </div>
+                  <img
+                    src='images/phone.png'
+                    alt='phone'
+                    className='h-16 w-16'
+                  />
                   <a
                     href='tel:+971543918220'
-                    className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gotham italic  font-bold '
+                    className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold '
                   >
                     +971543918220
                   </a>
                 </div>
                 <div className='flex items-center gap-3'>
-                  <div className='rounded-full gradient-border bg-cyan-300/20 p-2'>
-                    <Mail className='text-cyan-300' size={20} />
-                  </div>
+                  <img src='images/mail.png' alt='mail' className='h-16 w-16' />
                   <a
-                    href='mailto:info@riyadhrising.com'
-                    className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gotham italic  font-bold '
+                    href='mailto:info@riyadhrising.net'
+                    className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold '
                   >
-                    info@riyadhrising.com
+                    info@riyadhrising.net
                   </a>
                 </div>
               </div>
             </div>
           </div>
-         
+
           <div className='text-center relative mb-12'>
-            <p className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gotham italic  font-bold z-1 mb-4'>
+            <p className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold z-1 mb-4'>
               Secure your spot today and be part of Riyadh Rising 2025—
               <span className='text-yellow-400'>
                 where innovation meets opportunity.
               </span>
             </p>
-            <button className='bg-yellow-400 !cursor-pointer text-black font-bold py-2 px-8 rounded-full shadow-lg hover:bg-yellow-300 text-[16px] md:text-[22px] lg:text-[25px] 2xl:text-[30px]  font-gotham italic  transition-colors'>
+            <button
+              onClick={() => {
+                scrollToSection('ticket')
+              }}
+              className='bg-yellow-400 !cursor-pointer text-black font-bold py-2 px-8 rounded-full shadow-lg hover:bg-yellow-300 text-[16px] md:text-[22px] lg:text-[25px] 2xl:text-[30px]  font-gotham italic  transition-colors'
+            >
               Book Your Ticket Now
             </button>
           </div>

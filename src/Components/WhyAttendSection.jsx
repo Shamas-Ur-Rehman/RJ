@@ -5,7 +5,7 @@ const WhyAttendSection = () => {
   const reasons = [
     {
       icon: <img src='images/inv.png' className='w-10 h-10' />,
-      title: 'Build Global Connections',
+      title: 'Expand to MENA',
       description:
         'Build meaningful connections with investors, startups, and global leaders.'
     },
@@ -22,8 +22,8 @@ const WhyAttendSection = () => {
         'Discover cutting-edge innovations that are shaping the future.'
     },
     {
-      icon: <img src='images/lock.png' className='w-8 h-8' />,
-      title: 'Unlock Funding Opportunities',
+      icon: <img src='images/lock.png' className='w-8 h-8 ' />,
+      title: 'Meet Family Offices, VCs and Angel Groups',
       description:
         'Expand your business network and unlock funding opportunities.'
     }
@@ -64,7 +64,7 @@ const WhyAttendSection = () => {
                     transform: 'translate(-50%,-40%)'
                   }}
                 >
-                  <h3 className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gotham italic  font-bold'>
+                  <h3 className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold'>
                     {reason.title}
                   </h3>
                 </div>

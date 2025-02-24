@@ -3,26 +3,25 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "GothamUltra";
-  src: url("fonts/GothamUltra.otf") format("opentype");
+  font-family: 'GothamUltra';
+  src: url('fonts/GothamUltra.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "GothamBook";
-  src: url("fonts/GothamBook.otf") format("opentype");
+  font-family: 'GothamBook';
+  src: url('fonts/GothamBook.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "GothamRegular";
-  src: url("fonts/GothamRegular.otf") format("opentype");
+  font-family: 'GothamRegular';
+  src: url('fonts/GothamRegular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 .filter-white img {
   filter: invert(100%) brightness(200%);
 }
-
