@@ -1,21 +1,23 @@
 import React from 'react'
 import { Phone, Mail } from 'lucide-react'
 import ContactSection from './ContactSection'
+import { useNavigate } from 'react-router-dom'
 const context = [
   {
-    heading: 'Trailblazer Sponsorship',
+    heading: 'Silver Partners',
     text: `<p className="text-white/80">A cost-effective way to align your brand <br>with innovation.</p>`
   },
   {
-    heading: 'Innovator Sponsorship',
+    heading: 'Gold Partners',
     text: `<p className="text-white/80">Highlighted presence in key event areas<br> and marketing materials.</p>`
   },
   {
-    heading: 'Visionary Sponsorship',
+    heading: 'Platinum Partners',
     text: `<p className="text-white/80">Premium branding and exposure<br> across all event platforms.</p>`
   }
 ]
 const PartnerPage = ({ scrollToSection }) => {
+  const navigate = useNavigate()
   return (
     <>
       <div className='bg-black-to-green-gradient p-8 text-white' id='partner'>
@@ -98,6 +100,29 @@ const PartnerPage = ({ scrollToSection }) => {
               <div className='space-y-2'>
                 <div className='flex items-center gap-3'>
                   <img
+                    src='images/Contact.png'
+                    alt='phone'
+                    className='h-13 w-13'
+                  />
+                  <a
+                    href='tel:+971543918220'
+                    className='text-white text-[14px] md:text-[18px] lg:text-[14px] 2xl:text-[25px]  font-gothamBook italic  font-bold '
+                  >
+                    Muhammad Ayub Rafique <br />
+                    Founder and CEO Morse Bridge
+                  </a>
+                </div>
+                <div className='flex items-center gap-3'>
+                  <img src='images/mail.png' alt='mail' className='h-16 w-16' />
+                  <a
+                    href='mailto:info@riyadhrising.net'
+                    className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold '
+                  >
+                    ayub.ayubi@gmail.com{' '}
+                  </a>
+                </div>
+                <div className='flex items-center gap-3'>
+                  <img
                     src='images/phone.png'
                     alt='phone'
                     className='h-16 w-16'
@@ -109,13 +134,42 @@ const PartnerPage = ({ scrollToSection }) => {
                     +971543918220
                   </a>
                 </div>
+              </div>
+              <div className='space-y-2'>
+                <div className='flex items-center gap-3'>
+                  <img
+                    src='images/Contact.png'
+                    alt='phone'
+                    className='h-13 w-13'
+                  />
+                  <a
+                    href='tel:+971543918220'
+                    className='text-white text-[14px] md:text-[18px] lg:text-[14px] 2xl:text-[25px]  font-gothamBook italic  font-bold '
+                  >
+                    Managing Partner KSA ,<br />
+                    Lewa Abukhait
+                  </a>
+                </div>
                 <div className='flex items-center gap-3'>
                   <img src='images/mail.png' alt='mail' className='h-16 w-16' />
                   <a
                     href='mailto:info@riyadhrising.net'
                     className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold '
                   >
-                    info@riyadhrising.net
+                    Lewa@riyadhrising.net{' '}
+                  </a>
+                </div>
+                <div className='flex items-center gap-3'>
+                  <img
+                    src='images/phone.png'
+                    alt='phone'
+                    className='h-16 w-16'
+                  />
+                  <a
+                    href='tel:+971543918220'
+                    className='text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold '
+                  >
+                    +966 58 141 6749{' '}
                   </a>
                 </div>
               </div>
@@ -131,7 +185,7 @@ const PartnerPage = ({ scrollToSection }) => {
             </p>
             <button
               onClick={() => {
-                scrollToSection('ticket')
+                navigate('/registration-now')
               }}
               className='bg-yellow-400 !cursor-pointer text-black font-bold py-2 px-8 rounded-full shadow-lg hover:bg-yellow-300 text-[16px] md:text-[22px] lg:text-[25px] 2xl:text-[30px]  font-gotham italic  transition-colors'
             >
