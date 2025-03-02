@@ -8,6 +8,9 @@ import TicketComparisonTable from './Components/TicketComparisonTable'
 import WhyAttendSection from './Components/WhyAttendSection'
 import PartnerPage from './Components/PartnerPage'
 import ContactSection from './Components/ContactSection'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import RegistrationForm from './Components/RegistrationForm'
+import BuyPage from './Components/BuyPage'
 
 function App () {
   const scrollToSection = id => {
@@ -18,16 +21,29 @@ function App () {
       window.scrollTo({ top: sectionPosition, behavior: 'smooth' })
     }
   }
+
   return (
-    <div className='!overflow-hidden'>
-      <HeroSection scrollToSection={scrollToSection} />
-      <WhyRiyadhSection />
-      <EventHighlightsSlider />
-      <TicketPackages />
-      <TicketComparisonTable />
-      <WhyAttendSection />
-      <PartnerPage scrollToSection={scrollToSection} />
-    </div>
+    <Router>
+      <div className='!overflow-hidden'>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <>
+                <HeroSection scrollToSection={scrollToSection} />
+                <WhyRiyadhSection />
+                <EventHighlightsSlider />
+                <TicketPackages />
+                <TicketComparisonTable />
+                <WhyAttendSection />
+                <PartnerPage scrollToSection={scrollToSection} />
+              </>
+            }
+          />
+          <Route path='/registration-now' element={<RegistrationForm />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { Twitter, Linkedin, Instagram, Menu, X } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const HeroSection = ({ scrollToSection }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
+
   return (
     <div className='min-h-screen bg-teal-950 relative font-sans'>
       <div className='absolute inset-0 z-0'>
@@ -57,9 +60,7 @@ const HeroSection = ({ scrollToSection }) => {
               Get in Touch
             </a>
             <button
-              onClick={() => {
-                scrollToSection('ticket')
-              }}
+              onClick={() => navigate('/registration-now')}
               className='bg-yellow-400 text-black px-6 py-2 rounded-lg font-bold transition hover:bg-yellow-500'
             >
               Register Now
@@ -110,7 +111,7 @@ const HeroSection = ({ scrollToSection }) => {
                 Get in Touch
               </a>
               <button
-                onClick={() => scrollToSection('ticket')}
+                onClick={() => navigate('/registration-now')}
                 className='bg-yellow-400 text-black px-6 py-2 rounded-lg font-bold transition hover:bg-yellow-500'
               >
                 Register Now
