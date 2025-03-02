@@ -26,8 +26,17 @@ const ContactSection = () => {
               For more information, reach out to our team:
             </p>
           </div>
-
-          <div className='space-y-4'>
+          <div>
+            <div className='flex justify-center border-b-2 items-center flex-col pb-5 font-gothamBook font-normal text-[20px] text-white leading-[19px]  '>
+              <p>Project Of</p>
+              <img src='images/Morsebridgelogos-041.png' />
+            </div>
+            <div className='flex justify-center  mt-5 items-center flex-col pb-5 font-gothamBook font-normal text-[20px] text-white leading-[19px]  '>
+              <p>Strategic Partner</p>
+              <img src='images/logo-11.png' className='h-20 mt-4' />
+            </div>
+          </div>
+          {/* <div className='space-y-4'>
             <div className='space-y-2'>
               <div className='flex items-center gap-3'>
                 <img src='images/phone.png' alt='phone' className='h-16 w-16' />
@@ -81,12 +90,8 @@ const ContactSection = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-      </div>
-      <div className='flex justify-center items-center flex-col pb-5 font-gotham font-normal text-[20px] text-white leading-[19px]  '>
-        <p>Project Of</p>
-        <img src='images/Morsebridgelogos-041.png' />
       </div>
     </div>
   )

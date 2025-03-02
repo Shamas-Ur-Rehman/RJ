@@ -1,7 +1,9 @@
 import React from 'react'
 import { Check, X } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const TicketComparisonTable = () => {
+  const navigate = useNavigate()
   const links = [
     {
       name: 'Buy Standard Pass',
@@ -81,34 +83,28 @@ const TicketComparisonTable = () => {
     },
     {
       name: 'Priority Pitching',
-      standard: true,
-      premium: true,
+      standard: false,
+      premium: false,
       vip: true
     },
     {
       standard: (
-        <a href={links[0].url} target='_blank' rel='noreferrer'>
-          <button
-            className='bg-[#03232ba6] hover:bg-[#03232B] transition-all duration-100 text-white
- font-bold py-2 px-4 rounded-lg '
-          >
+        <a onClick={() => navigate('/registration-now')} rel='noreferrer'>
+          <button className='bg-yellow-400 hover:bg-yellow-300 transition-all duration-100 text-black font-bold py-2 px-4 rounded-lg '>
             {links[0].name}
           </button>
         </a>
       ),
       premium: (
-        <a href={links[1].url} target='_blank' rel='noreferrer'>
-          <button
-            className='bg-[#03232ba6] hover:bg-[#03232B] transition-all duration-100 text-white
- font-bold py-2 px-4 rounded-lg '
-          >
+        <a onClick={() => navigate('/registration-now')} rel='noreferrer'>
+          <button className='bg-yellow-400 hover:bg-yellow-300 transition-all duration-100 text-black font-bold py-2 px-4 rounded-lg '>
             {links[1].name}
           </button>
         </a>
       ),
       vip: (
-        <a href={links[2].url} target='_blank' rel='noreferrer'>
-          <button className='bg-[#03232ba6] hover:bg-[#03232B] transition-all duration-100  text-white font-bold py-2 px-4 rounded-lg '>
+        <a onClick={() => navigate('/registration-now')} rel='noreferrer'>
+          <button className='bg-yellow-400 hover:bg-yellow-300 transition-all duration-100  text-black font-bold py-2 px-4 rounded-lg '>
             {links[2].name}
           </button>
         </a>
@@ -150,18 +146,21 @@ const TicketComparisonTable = () => {
                 <th className='py-4 border-r border-black pt-10 px-6 text-left text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold bg-[#404146] '>
                   Features
                 </th>
-                <th className='py-4 border-r !text-center border-black pt-10 px-6  text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold bg-[#404146] '>
+                <th
+                  onClick={() => navigate('/registration-now')}
+                  className='py-4 border-r !text-center border-black pt-10 px-6 hover:text-yellow-400 cursor-pointer transition-all duration-150 text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold bg-[#404146] '
+                >
                   Standard Pass
                 </th>
                 <th
-                  className='py-4 border-r border-black pt-10 px-6 !text - center
- text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold bg-[#404146] '
+                  onClick={() => navigate('/registration-now')}
+                  className='py-4 border-r hover:text-yellow-400 cursor-pointer transition-all duration-150 border-black pt-10 px-6 !text - center text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold bg-[#404146] '
                 >
                   Premium Pass
                 </th>
                 <th
-                  className='py-4 border-r border-black pt-10 px-6 !text - center
- text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic  font-bold bg-[#404146] '
+                  onClick={() => navigate('/registration-now')}
+                  className='py-4 border-r border-black pt-10 px-6 !text - center text-white text-[14px] md:text-[18px] lg:text-[20px] 2xl:text-[25px]  font-gothamBook italic hover:text-yellow-400 cursor-pointer transition-all duration-150 font-bold bg-[#404146] '
                 >
                   VIP Pass
                 </th>
